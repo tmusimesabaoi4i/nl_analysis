@@ -75,6 +75,10 @@ class WinComm :
 
         result_ping = self.__return_num_from_cmd(self.__jp_ping_info,7)
 
+        if result_ping[4] == 0: result_ping[4] = 1 # 0の場合は1msecとする
+        if result_ping[5] == 0: result_ping[5] = 1 # 0の場合は1msecとする
+        if result_ping[6] == 0: result_ping[6] = 1 # 0の場合は1msecとする
+
         self.__min_band_bit = self.__size_p * 8 * 2 * 10**3 / result_ping[4]
         self.__max_band_bit = self.__size_p * 8 * 2 * 10**3 / result_ping[5]
         self.__mean_band_bit = self.__size_p * 8 * 2 * 10**3 / result_ping[6]

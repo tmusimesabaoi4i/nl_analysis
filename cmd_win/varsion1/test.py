@@ -4,7 +4,7 @@ import win_comm as wc
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd # install openpyxl
-
+import time
 from matplotlib import ticker # 軸
 
 class Test :
@@ -46,6 +46,7 @@ class Test :
             execute_time = np.append(execute_time,[str(speed_test[0].hour) + ':' + str(speed_test[0].minute) + ':' + str(speed_test[0].second)])
 
             print(str(dt_end_time)+' done.')
+            time.sleep(10)
 
             if dt_diff > self.__t_d : break
 
@@ -87,9 +88,9 @@ class Test :
 if __name__ == '__main__':
     img_file = 'result.png'
     xlsx_file = 'data.xlsx'
-    packets_num = 60 # パケットの数
+    packets_num = 25 # パケットの数
     byte_num = 60000 # パケットのバイト数 = 60kB
     ip_addr = '192.168.1.18' # 送り先のIPアドレス
-    t_d = datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=10, hours=0, weeks=0)
+    t_d = datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=1, weeks=0)
     v_win_test = Test(img_file,xlsx_file,packets_num,byte_num,ip_addr,t_d)
     v_win_test.run()
