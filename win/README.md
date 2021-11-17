@@ -8,7 +8,7 @@ python -m venv C:\Users\yohei\python_env\%VENV%
 ```
 set VENV=py39
 CALL C:\Users\yohei\python_env\%VENV%\Scripts\activate.bat
-python -m pip install -U pip
+python -m pip install --upgrade pip setuptools wheel
 
 python -m pip install matplotlib
 python -m pip install pandas
