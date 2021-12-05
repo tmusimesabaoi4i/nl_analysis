@@ -92,4 +92,6 @@ rtt min/avg/max/mdev = 2.326/2.630/3.367/0.286 ms
 そして、実行結果の一番最後には、RTTの最大値・RTTの最小値・RTTの平均値が
 表示されます。RTTは通信の往復時間なので、帯域は以下のように計算することが出来ます。
 
+<p align="center">
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{BANDWIDTH}&space;=&space;{\mathrm{data&space;size}}&space;*&space;2&space;/&space;\mathrm{RTT}" title="\mathrm{BANDWIDTH} = {\mathrm{data size}} * 2 / \mathrm{RTT}" />
+</p>
