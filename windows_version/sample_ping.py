@@ -1,5 +1,3 @@
-# IN CASE OF PING
-```python
 import subprocess
 import re
 
@@ -58,6 +56,3 @@ jp_ping_result_dict = {
 }
 
 print(jp_ping_result_dict)
-```
-
-# IN CASE OF SOCKET
