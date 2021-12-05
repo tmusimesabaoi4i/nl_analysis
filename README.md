@@ -3,12 +3,12 @@
 
 # CREATING VIRTUAL ENVIRONMENT
 ```
-python -m venv C:\Users\py39
+python -m venv C:\py39
 ```
 
 # ENTER THE VIRTUAL ENVIRONMENT
 ```
-CALL C:\Users\py39\Scripts\activate.bat
+CALL C:\py39\Scripts\activate.bat
 ```
 
 # INSTALL THE PYTHON LIBRARIES
