@@ -95,3 +95,11 @@ rtt min/avg/max/mdev = 2.326/2.630/3.367/0.286 ms
 <p align="center">
 <img src="https://latex.codecogs.com/gif.latex?\mathrm{BANDWIDTH}&space;=&space;{\mathrm{data&space;size}}&space;*&space;2&space;/&space;\mathrm{RTT}" title="\mathrm{BANDWIDTH} = {\mathrm{data size}} * 2 / \mathrm{RTT}" />
 </p>
+
+### CAUTION
+windowsでは`ping`の受送信がファイヤーウォールによって禁止されている場合があるそうです。
+なので、`ping`が通らない時はファイヤーウォールの設定を変更する必要があります。
+<sup id="note_ref-1"><a href="#note-1">[参考1]</a></sup>
+
+# REFERENCE
+<b><a id="note-1" href="#note_ref-1">[参考1]</a></b> [【Windows 10対応】Windowsのファイアウォールで「ping」コマンドへの応答を許可する](https://atmarkit.itmedia.co.jp/ait/articles/1712/21/news018.html)
