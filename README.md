@@ -90,4 +90,6 @@ rtt min/avg/max/mdev = 2.326/2.630/3.367/0.286 ms
 ### CALCULATE BANDWIDTH
 `ping`を実行すると、[ラウンドトリップタイム(RTT)](https://jprs.jp/glossary/index.php?ID=0195#:~:text=%E9%80%9A%E4%BF%A1%E7%9B%B8%E6%89%8B%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92,%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BE%80%E5%BE%A9%E6%99%82%E9%96%93%EF%BC%89%E3%81%A7%E3%81%99%E3%80%82)が表示されます。
 そして、実行結果の一番最後には、RTTの最大値・RTTの最小値・RTTの平均値が
-表示されます。
+表示されます。RTTは通信の往復時間なので、帯域は以下のように計算することが出来ます。
+
+<img src="https://latex.codecogs.com/gif.latex?\mathrm{BANDWIDTH}&space;=&space;{\mathrm{data&space;size}}&space;*&space;2&space;/&space;\mathrm{RTT}" title="\mathrm{BANDWIDTH} = {\mathrm{data size}} * 2 / \mathrm{RTT}" />
