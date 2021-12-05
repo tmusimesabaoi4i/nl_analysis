@@ -103,7 +103,7 @@ windowsでは`ping`の受送信がファイヤーウォールによって禁止�
 
 # IN CASE OF SOCKET
 ### CALCULATE BANDWIDTH
-[bytes](https://docs.python.org/ja/3/library/stdtypes.html?#bytes-objects)
+[bytes()](https://docs.python.org/ja/3/library/stdtypes.html?#bytes-objects)
 関数によって任意のバイト列を生成します。
 また、RTTは
 [perf_counter()](https://docs.python.org/ja/3.7/library/time.html?#time.perf_counter)
