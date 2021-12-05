@@ -1,6 +1,7 @@
 # ABOUT REPOSITORY
 ネットワークの帯域を計測するためのプログラムを保管するレポジトリです。
-[[Program Explanation]](/doc/program_explanation.md)
+
+- [[Sample Program Explanation]](/doc/program_explanation.md)
 
 # CREATING VIRTUAL ENVIRONMENT
 ```
