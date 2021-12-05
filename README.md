@@ -101,5 +101,13 @@ windowsでは`ping`の受送信がファイヤーウォールによって禁止�
 なので、`ping`が通らない時はファイヤーウォールの設定を変更する必要があります。
 <sup id="note_ref-1"><a href="#note-1">[参考1]</a></sup>
 
+# IN CASE OF SOCKET
+### CALCULATE BANDWIDTH
+[bytes](https://docs.python.org/ja/3/library/stdtypes.html?#bytes-objects)
+関数によって任意のバイト列を生成します。
+また、RTTは
+[perf_counter()](https://docs.python.org/ja/3.7/library/time.html?#time.perf_counter)
+を利用して計測します。
+
 # REFERENCE
 <b><a id="note-1" href="#note_ref-1">[参考1]</a></b> [【Windows 10対応】Windowsのファイアウォールで「ping」コマンドへの応答を許可する](https://atmarkit.itmedia.co.jp/ait/articles/1712/21/news018.html)
