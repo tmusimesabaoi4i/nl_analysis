@@ -6,9 +6,14 @@
 python -m venv C:\Users\yohei\py39
 ```
 
-# ENTER THE VIRTUAL ENVIRONMENT
+# ACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 CALL C:\Users\yohei\py39\Scripts\activate.bat
+```
+
+# DEACTIVATE THE VIRTUAL ENVIRONMENT
+```
+CALL C:\Users\yohei\py39\Scripts\deactivate.bat
 ```
 
 # INSTALL THE PYTHON LIBRARIES
