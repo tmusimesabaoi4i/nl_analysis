@@ -31,8 +31,7 @@ python -m pip install opencv-python
 ```
 
 # MEASUREMENT METHOD
-PINGを利用した計測が帯域の計測の主なやり方ですが、
-SOCKET通信を利用した方法での計測も行います。
+PINGを利用した計測が帯域の計測を行います。
 
 # IN CASE OF PING
 `ping`コマンドを利用した帯域計測の方法について説明します。
@@ -102,14 +101,6 @@ rtt min/avg/max/mdev = 2.326/2.630/3.367/0.286 ms
 windowsでは`ping`の受送信がファイヤーウォールによって禁止されている場合があるそうです。
 なので、`ping`が通らない時はファイヤーウォールの設定を変更する必要があります。
 <sup id="note_ref-1"><a href="#note-1">[参考1]</a></sup>
-
-# IN CASE OF SOCKET
-### CALCULATE BANDWIDTH
-[bytes()](https://docs.python.org/ja/3/library/stdtypes.html?#bytes-objects)
-関数によって任意のバイト列を生成します。
-また、RTTは
-[perf_counter()](https://docs.python.org/ja/3.7/library/time.html?#time.perf_counter)
-を利用して計測します。
 
 # REFERENCE
 <b><a id="note-1" href="#note_ref-1">[参考1]</a></b> [【Windows 10対応】Windowsのファイアウォールで「ping」コマンドへの応答を許可する](https://atmarkit.itmedia.co.jp/ait/articles/1712/21/news018.html)
