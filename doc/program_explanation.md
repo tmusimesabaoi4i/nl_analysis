@@ -67,3 +67,12 @@ print(jp_ping_result_dict)
 ```
 
 # IN CASE OF SOCKET
+### CLIENT
+```python
+```
+### SERVER
+```python
+```
+### RESULT
+```
+```
