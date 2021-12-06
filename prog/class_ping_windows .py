@@ -1,8 +1,3 @@
-# PING CLASS
-- [[Sample Program Explanation1]](./program_explanation1.md)で作成したプグラムを
-少し変更して、`ping`コマンドを`20`回実行しその結果を返却するクラスを作成します。
-
-```python
 import subprocess
 import re
 
@@ -84,10 +79,3 @@ if __name__ == '__main__':
     wp = Ping_Windows(packets_num, byte_num, ip_addr)
     ans = wp.run()
     print(ans)
-```
-
-上を実行すると以下のようになります。
-
-```
-{'MAX_BANDWIDTH': 131.0, 'MIN_BANDWIDTH': 65.5, 'AVE_BANDWIDTH': 131.0}
-```

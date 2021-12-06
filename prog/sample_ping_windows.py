@@ -17,29 +17,29 @@ jp_ping_info = re.sub('.+\r\n','',jp_code,2+packets_num) # 最後の部分のみ
 
 jp_ping_result = list()                                  # 結果を格納するリスト
 tmp = str()
-for text in jp_ping_info :
+for text in jp_ping_info:
     if (text in ['0', '1', '2', '3',\
-             '4', '5', '6', '7', '8', '9', '.']) :
+             '4', '5', '6', '7', '8', '9', '.']):
         tmp += text
-    elif tmp != '' :
+    elif tmp != '':
         jp_ping_result.append(tmp)
         tmp = str()
 jp_ping_result = [float(tmp) for tmp in jp_ping_result]    # 文字列を数字に変換する
 
 # 0で割る場合は除く
-if jp_ping_result[4] != 0.0 :
+if jp_ping_result[4] != 0.0:
     min_late = byte_num * 2.0 * 10**3 / jp_ping_result[4]
-else :
+else:
     min_late = 0.0
 
-if jp_ping_result[5] != 0.0 :
+if jp_ping_result[5] != 0.0:
     max_late = byte_num * 2.0 * 10**3 / jp_ping_result[5]
-else :
+else:
     max_late = 0.0
 
-if jp_ping_result[6] != 0.0 :
+if jp_ping_result[6] != 0.0:
     mean_late = byte_num * 2 * 10**3 / jp_ping_result[6]
-else :
+else:
     mean_late = 0.0
 
 jp_ping_result_dict = {
