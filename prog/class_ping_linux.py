@@ -1,12 +1,7 @@
-# PING CLASS
-- [[Sample Program Explanation1]](./program_explanation1.md)で作成したプグラムを
-少し変更して、`ping`コマンドを`20`回実行しその結果を返却するクラスを作成します。
-
-```python
 import subprocess
 import re
 
-class Ping_Windows:
+class Ping_Linux:
     def __init__(self, packets_num: int,
         byte_num: int, ip_addr: str) -> None:
         self.__packets_num = packets_num
@@ -14,8 +9,8 @@ class Ping_Windows:
         self.__ip_addr = ip_addr
 
         self.__cmd = 'ping' + \
-                ' -n ' + str(packets_num) + \
-                ' -l ' + str(byte_num) + \
+                ' -c ' + str(packets_num) + \
+                ' -s ' + str(byte_num) + \
                 ' ' + ip_addr
 
     def run_command(self) -> None:
@@ -31,7 +26,7 @@ class Ping_Windows:
         jp_code = self.__command_result
         packets_num = self.__packets_num
 
-        jp_ping_info = re.sub('.+\r\n','',jp_code,2+packets_num) # 最後の部分のみ取り出す
+        jp_ping_info = re.sub('.+\n','',jp_code,2+packets_num) # 最後の部分のみ取り出す
 
         jp_ping_result = list()                                  # 結果を格納するリスト
         tmp = str()
@@ -49,6 +44,7 @@ class Ping_Windows:
 
     def ans(self) -> None:
         jp_ping_result = self.__int_command_result
+        byte_num = self.__byte_num
 
         if jp_ping_result[4] != 0.0:
             min_late = byte_num * 2.0 * 10**3 / jp_ping_result[4]
@@ -56,20 +52,21 @@ class Ping_Windows:
             min_late = 0.0
 
         if jp_ping_result[5] != 0.0:
-            max_late = byte_num * 2.0 * 10**3 / jp_ping_result[5]
-        else:
-            max_late = 0.0
-
-        if jp_ping_result[6] != 0.0:
-            mean_late = byte_num * 2 * 10**3 / jp_ping_result[6]
+            mean_late = byte_num * 2 * 10**3 / jp_ping_result[5]
         else:
             mean_late = 0.0
+
+        if jp_ping_result[6] != 0.0:
+            max_late = byte_num * 2.0 * 10**3 / jp_ping_result[6]
+        else:
+            max_late = 0.0
 
         self.__command_result_dict = {
         'MAX_BANDWIDTH':min_late/10**6, # [Mega byte / sec]
         'MIN_BANDWIDTH':max_late/10**6, # [Mega byte / sec]
         'AVE_BANDWIDTH':mean_late/10**6 # [Mega byte / sec]
         }
+        del jp_ping_result, byte_num, min_late, max_late, mean_late
 
     def run(self) -> dict:
         self.run_command()
@@ -81,13 +78,6 @@ if __name__ == '__main__':
     packets_num = 20
     byte_num = 65500
     ip_addr = '192.168.1.38'
-    wp = Ping_Windows(packets_num, byte_num, ip_addr)
-    ans = wp.run()
+    pl = Ping_Linux(packets_num, byte_num, ip_addr)
+    ans = pl.run()
     print(ans)
-```
-
-上を実行すると以下のようになります。
-
-```
-{'MAX_BANDWIDTH': 131.0, 'MIN_BANDWIDTH': 65.5, 'AVE_BANDWIDTH': 131.0}
-```

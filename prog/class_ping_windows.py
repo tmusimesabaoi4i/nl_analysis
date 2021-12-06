@@ -44,6 +44,7 @@ class Ping_Windows:
 
     def ans(self) -> None:
         jp_ping_result = self.__int_command_result
+        byte_num = self.__byte_num
 
         if jp_ping_result[4] != 0.0:
             min_late = byte_num * 2.0 * 10**3 / jp_ping_result[4]
@@ -65,6 +66,7 @@ class Ping_Windows:
         'MIN_BANDWIDTH':max_late/10**6, # [Mega byte / sec]
         'AVE_BANDWIDTH':mean_late/10**6 # [Mega byte / sec]
         }
+        del jp_ping_result, byte_num, min_late, max_late, mean_late
 
     def run(self) -> dict:
         self.run_command()
@@ -76,6 +78,6 @@ if __name__ == '__main__':
     packets_num = 20
     byte_num = 65500
     ip_addr = '192.168.1.38'
-    wp = Ping_Windows(packets_num, byte_num, ip_addr)
-    ans = wp.run()
+    pw = Ping_Windows(packets_num, byte_num, ip_addr)
+    ans = pw.run()
     print(ans)

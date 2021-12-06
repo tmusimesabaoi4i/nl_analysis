@@ -1,22 +1,36 @@
 # ABOUT REPOSITORY
 ネットワークの帯域を計測するためのプログラムを保管するレポジトリです。
 
-- [[Sample Program Explanation1]](/doc/program_explanation1.md)
-- [[Sample Program Explanation2]](/doc/program_explanation2.md)
+- [[Sample Program Explanation]](/doc/program_explanation.md)
 
-# CREATING VIRTUAL ENVIRONMENT
+# [WINDOWS]CREATING VIRTUAL ENVIRONMENT
 ```
 python -m venv C:\Users\yohei\py39
 ```
 
-# ACTIVATE THE VIRTUAL ENVIRONMENT
+# [WINDOWS]ACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 CALL C:\Users\yohei\py39\Scripts\activate.bat
 ```
 
-# DEACTIVATE THE VIRTUAL ENVIRONMENT
+# [WINDOWS]DEACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 CALL C:\Users\yohei\py39\Scripts\deactivate.bat
+```
+
+# [LINUX]CREATING VIRTUAL ENVIRONMENT
+```
+python3 -m venv /mnt/d/py39
+```
+
+# [LINUX]ACTIVATE THE VIRTUAL ENVIRONMENT
+```
+source /mnt/d/py39/bin/activate
+```
+
+# [LINUX]DEACTIVATE THE VIRTUAL ENVIRONMENT
+```
+deactivate
 ```
 
 # INSTALL THE PYTHON LIBRARIES
@@ -27,7 +41,6 @@ python -m pip install Flask
 python -m pip install scipy
 python -m pip install matplotlib
 python -m pip install sounddevice
-python -m pip install pyrealsense2
 python -m pip install opencv-python
 ```
 
