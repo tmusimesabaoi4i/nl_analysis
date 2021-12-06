@@ -24,7 +24,7 @@ for text in jp_ping_info :
     elif tmp != '' :
         jp_ping_result.append(tmp)
         tmp = str()
-jp_ping_result = [int(tmp) for tmp in jp_ping_result]    # 文字列を数字に変換する
+jp_ping_result = [float(tmp) for tmp in jp_ping_result]    # 文字列を数字に変換する
 
 # 0で割る場合は除く
 if jp_ping_result[4] != 0.0 :

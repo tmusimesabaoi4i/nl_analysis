@@ -1,7 +1,8 @@
 # ABOUT REPOSITORY
 ネットワークの帯域を計測するためのプログラムを保管するレポジトリです。
 
-- [[Sample Program Explanation]](/doc/program_explanation.md)
+- [[Sample Program Explanation1]](/doc/program_explanation1.md)
+- [[Sample Program Explanation2]](/doc/program_explanation2.md)
 
 # CREATING VIRTUAL ENVIRONMENT
 ```
@@ -31,7 +32,7 @@ python -m pip install opencv-python
 ```
 
 # MEASUREMENT METHOD
-PINGを利用した計測が帯域の計測を行います。
+`ping`を利用し、帯域の計測を行います。
 
 # IN CASE OF PING
 `ping`コマンドを利用した帯域計測の方法について説明します。
