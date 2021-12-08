@@ -44,14 +44,14 @@ deactivate
 ```
 #### INSTALL THE PYTHON LIBRARIES
 ```
-y | python3 -m pip install --upgrade pip setuptools wheel &&
+yes | python3 -m pip install --upgrade pip setuptools wheel &&
 
 source /mnt/d/py39/bin/activate &&
-y | python3 -m pip install Flask &&
-y | python3 -m pip install scipy &&
-y | python3 -m pip install matplotlib &&
-y | python3 -m pip install sounddevice &&
-y | python3 -m pip install opencv-python
+yes | python3 -m pip install Flask &&
+yes | python3 -m pip install scipy &&
+yes | python3 -m pip install matplotlib &&
+yes | python3 -m pip install sounddevice &&
+yes | python3 -m pip install opencv-python
 ```
 
 # MEASUREMENT METHOD
