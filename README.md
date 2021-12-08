@@ -49,6 +49,7 @@ yes | python3 -m pip install --upgrade pip setuptools wheel &&
 source /mnt/d/py39/bin/activate &&
 yes | python3 -m pip install Flask &&
 yes | python3 -m pip install scipy &&
+yes | python3 -m pip install openpyxl &&
 yes | python3 -m pip install matplotlib &&
 yes | python3 -m pip install sounddevice &&
 yes | python3 -m pip install opencv-python
