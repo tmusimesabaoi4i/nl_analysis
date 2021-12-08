@@ -20,14 +20,14 @@ CALL C:\Users\yohei\py39\Scripts\deactivate.bat
 # LINUX PYTHON
 #### [LINUX]INSTALL PYTHON
 ```
-sudo apt remove python3 &&
-sudo apt remove pip &&
+sudo apt remove python3 -y &&
+sudo apt remove pip -y &&
 sudo apt update &&
 sudo apt full-upgrade -y &&
 sudo apt autoremove -y &&
 sudo apt clean &&
-sudo apt install python3 &&
-sudo apt install pip
+sudo apt install python3 -y &&
+sudo apt install pip -y
 ```
 #### [LINUX]CREATING VIRTUAL ENVIRONMENT
 ```
@@ -43,14 +43,14 @@ deactivate
 ```
 #### INSTALL THE PYTHON LIBRARIES
 ```
-python3 -m pip install --upgrade pip setuptools wheel &&
+python3 -m pip install --upgrade pip setuptools wheel -y &&
 
 source /mnt/d/py39/bin/activate &&
-python3 -m pip install Flask &&
-python3 -m pip install scipy &&
-python3 -m pip install matplotlib &&
-python3 -m pip install sounddevice &&
-python3 -m pip install opencv-python
+python3 -m pip install Flask -y &&
+python3 -m pip install scipy -y &&
+python3 -m pip install matplotlib -y &&
+python3 -m pip install sounddevice -y &&
+python3 -m pip install opencv-python -y
 ```
 
 # MEASUREMENT METHOD
