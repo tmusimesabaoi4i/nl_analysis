@@ -3,45 +3,54 @@
 
 - [[Sample Program Explanation]](/doc/program_explanation.md)
 
-# [WINDOWS]CREATING VIRTUAL ENVIRONMENT
+# WINDOWS PYTHON
+#### [WINDOWS]CREATING VIRTUAL ENVIRONMENT
 ```
 python -m venv C:\Users\yohei\py39
 ```
-
-# [WINDOWS]ACTIVATE THE VIRTUAL ENVIRONMENT
+#### [WINDOWS]ACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 CALL C:\Users\yohei\py39\Scripts\activate.bat
 ```
-
-# [WINDOWS]DEACTIVATE THE VIRTUAL ENVIRONMENT
+#### [WINDOWS]DEACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 CALL C:\Users\yohei\py39\Scripts\deactivate.bat
 ```
 
-# [LINUX]CREATING VIRTUAL ENVIRONMENT
+# LINUX PYTHON
+#### [LINUX]INSTALL PYTHON
+```
+sudo apt remove python3 &&
+sudo apt remove pip &&
+sudo apt update &&
+sudo apt full-upgrade -y &&
+sudo apt autoremove -y &&
+sudo apt clean &&
+sudo apt install python3 &&
+sudo apt install pip
+```
+#### [LINUX]CREATING VIRTUAL ENVIRONMENT
 ```
 python3 -m venv /mnt/d/py39
 ```
-
-# [LINUX]ACTIVATE THE VIRTUAL ENVIRONMENT
+#### [LINUX]ACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 source /mnt/d/py39/bin/activate
 ```
-
-# [LINUX]DEACTIVATE THE VIRTUAL ENVIRONMENT
+#### [LINUX]DEACTIVATE THE VIRTUAL ENVIRONMENT
 ```
 deactivate
 ```
-
-# INSTALL THE PYTHON LIBRARIES
+#### INSTALL THE PYTHON LIBRARIES
 ```
-python -m pip install --upgrade pip setuptools wheel
+python3 -m pip install --upgrade pip setuptools wheel &&
 
-python -m pip install Flask
-python -m pip install scipy
-python -m pip install matplotlib
-python -m pip install sounddevice
-python -m pip install opencv-python
+source /mnt/d/py39/bin/activate &&
+python3 -m pip install Flask &&
+python3 -m pip install scipy &&
+python3 -m pip install matplotlib &&
+python3 -m pip install sounddevice &&
+python3 -m pip install opencv-python
 ```
 
 # MEASUREMENT METHOD
