@@ -62,9 +62,9 @@ class Ping_Windows:
             mean_late = 0.0
 
         self.__command_result_dict = {
-        'MAX_BANDWIDTH':min_late/10**6, # [Mega byte / sec]
-        'MIN_BANDWIDTH':max_late/10**6, # [Mega byte / sec]
-        'AVE_BANDWIDTH':mean_late/10**6 # [Mega byte / sec]
+        'MAX_BANDWIDTH':min_late*8/10**6, # [Mega bit / sec]
+        'MIN_BANDWIDTH':max_late*8/10**6, # [Mega bit / sec]
+        'AVE_BANDWIDTH':mean_late*8/10**6 # [Mega bit / sec]
         }
         del jp_ping_result, byte_num, min_late, max_late, mean_late
 
