@@ -1,8 +1,6 @@
 import time
 import datetime
-import numpy as np
 import openpyxl
-import matplotlib.pyplot as plt
 
 packets_num = 1                     # パケットの数
 byte_num = 1400                     # パケットのバイト数
