@@ -55,6 +55,11 @@ yes | python3 -m pip install sounddevice &&
 yes | python3 -m pip install opencv-python
 ```
 
+もし、[PortAudio](https://packages.debian.org/bullseye/portaudio19-dev)がインストールされていない場合は以下のコマンドによってインストールすることが出来ます。
+```
+sudo apt install portaudio19-dev
+```
+
 # MEASUREMENT METHOD
 `ping`を利用し、帯域の計測を行います。
 
