@@ -9,9 +9,10 @@ ROUND = int(1e3)                    # 送信回数
 OSNAME='linux'                      # プログラムを実行するOSの名前
 
 if __name__ == '__main__':
-    ip_addr_array = ['192.168.103.2','10.90.8.76']        # 送り先のIPアドレス 10.90.8.'76'or'112'
-    
-    file = 'sample_data'
+    ip_addr_array = ['192.168.103.2','10.90.8.112']        # 送り先のIPアドレス
+    #ip_addr_array = ['192.168.1.38','192.168.1.39']        # 送り先のIPアドレス
+
+    file = 'sample_data_2'
 
     wb = openpyxl.load_workbook(file+'.xlsx')
 
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     np_ans = np.array(l_ans)
 
     wb.close()
-    
+
     capprops = dict(linestyle='-', linewidth=1, color='black')
     boxprops = dict(linestyle='-', linewidth=1, color='black')
     whiskerprops = dict(linestyle='-', linewidth=1, color='black')
@@ -49,10 +50,8 @@ if __name__ == '__main__':
                     flierprops=flierprops,
                     medianprops=medianprops,
                     showmeans=True) # 平均値を表示する
-    ax.set_ylabel('Bandwidth [M bit/sec]')
     plt.savefig(file+'_XL'+'.svg', dpi=500)
     plt.savefig(file+'_XL'+'.png', dpi=500)
-    
+
     q075, q050, q025 = np.percentile(np_ans[0], [75 ,50 ,25])
     q175, q150, q125 = np.percentile(np_ans[1], [75 ,50 ,25])
-    

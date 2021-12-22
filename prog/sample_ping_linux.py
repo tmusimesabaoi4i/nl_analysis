@@ -1,8 +1,8 @@
 import subprocess
 import re
 
-packets_num = 20                    # パケットの数
-byte_num = 65500                    # パケットのバイト数
+packets_num = 20
+byte_num = 1400
 ip_addr = '192.168.1.38'            # 送り先のIPアドレス
 
 # 実行するコマンド
@@ -28,17 +28,17 @@ jp_ping_result = [float(tmp) for tmp in jp_ping_result]    # 文字列を数字�
 
 # 0で割る場合は除く
 if jp_ping_result[4] != 0.0:
-    min_late = byte_num * 2.0 * 10**3 / jp_ping_result[4]
+    min_late = byte_num * 2.0 * 8.0 * 10**3 / jp_ping_result[4]
 else:
     min_late = 0.0
 
 if jp_ping_result[5] != 0.0:
-    mean_late = byte_num * 2 * 10**3 / jp_ping_result[5]
+    mean_late = byte_num * 2.0 * 8.0 * 10**3 / jp_ping_result[5]
 else:
     mean_late = 0.0
 
 if jp_ping_result[6] != 0.0:
-    max_late = byte_num * 2.0 * 10**3 / jp_ping_result[6]
+    max_late = byte_num * 2.0 * 8.0 * 10**3 / jp_ping_result[6]
 else:
     max_late = 0.0
 

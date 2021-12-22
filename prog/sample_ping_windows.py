@@ -1,8 +1,8 @@
 import subprocess
 import re
 
-packets_num = 20                    # パケットの数
-byte_num = 65500                    # パケットのバイト数
+packets_num = 20
+byte_num = 1400
 ip_addr = '192.168.1.38'            # 送り先のIPアドレス
 
 # 実行するコマンド

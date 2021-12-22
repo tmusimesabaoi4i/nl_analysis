@@ -47,24 +47,24 @@ class Ping_Windows:
         byte_num = self.__byte_num
 
         if jp_ping_result[4] != 0.0:
-            min_late = byte_num * 2.0 * 10**3 / jp_ping_result[4]
+            min_late = byte_num * 2.0 *8.0 * 10**3 / jp_ping_result[4]
         else:
             min_late = 0.0
 
         if jp_ping_result[5] != 0.0:
-            max_late = byte_num * 2.0 * 10**3 / jp_ping_result[5]
+            max_late = byte_num * 2.0 *8.0 * 10**3 / jp_ping_result[5]
         else:
             max_late = 0.0
 
         if jp_ping_result[6] != 0.0:
-            mean_late = byte_num * 2 * 10**3 / jp_ping_result[6]
+            mean_late = byte_num * 2.0 *8.0 * 10**3 / jp_ping_result[6]
         else:
             mean_late = 0.0
 
         self.__command_result_dict = {
-        'MAX_BANDWIDTH':min_late*8/10**6, # [Mega bit / sec]
-        'MIN_BANDWIDTH':max_late*8/10**6, # [Mega bit / sec]
-        'AVE_BANDWIDTH':mean_late*8/10**6 # [Mega bit / sec]
+        'MAX_BANDWIDTH':min_late/10**6, # [Mega bit / sec]
+        'MIN_BANDWIDTH':max_late/10**6, # [Mega bit / sec]
+        'AVE_BANDWIDTH':mean_late/10**6 # [Mega bit / sec]
         }
         del jp_ping_result, byte_num, min_late, max_late, mean_late
 
@@ -76,7 +76,7 @@ class Ping_Windows:
 
 if __name__ == '__main__':
     packets_num = 20
-    byte_num = 65500
+    byte_num = 1400
     ip_addr = '192.168.1.38'
     pw = Ping_Windows(packets_num, byte_num, ip_addr)
     ans = pw.run()

@@ -4,7 +4,7 @@ import openpyxl
 
 packets_num = 1                     # パケットの数
 byte_num = 1400                     # パケットのバイト数
-ROUND = int(1e1)                    # 送信回数
+ROUND = int(1e3)                    # 送信回数
 
 OSNAME='linux'                      # プログラムを実行するOSの名前
 
@@ -39,6 +39,8 @@ if __name__ == '__main__':
             ans = ans['AVE_BANDWIDTH']      # 値を取得する
             cellXL.value = ans              # セルに値を書き込む
             wb.save(file_nameXL)            # 上書き保存
+            if i%10 == 0:                   # ある一定の回数で通知する
+                print('ip: '+ip_addr+' , '+str(i)+': done')
             time.sleep(0.1)
 
         wb.close()                          # エクセルを閉じる
